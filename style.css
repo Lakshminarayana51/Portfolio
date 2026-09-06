@@ -1367,3 +1367,247 @@ img {
         gap: 3rem;
     }
 }
+/* ============================================================
+   VISUAL IMPACT UPGRADES
+   ============================================================ */
+
+/* Ambient page glow */
+body {
+    background-image:
+        radial-gradient(900px 520px at 92% -10%, rgba(100, 255, 218, 0.08), transparent 60%),
+        radial-gradient(820px 620px at -12% 110%, rgba(77, 159, 255, 0.08), transparent 60%);
+    background-attachment: fixed;
+}
+
+/* Header shadow once scrolled */
+.scroll-header {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Availability badge in hero */
+.home__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem 1.1rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid rgba(100, 255, 218, 0.35);
+    background: rgba(100, 255, 218, 0.08);
+    border-radius: 2rem;
+    color: var(--accent-color);
+    font-size: var(--smaller-font-size);
+    font-family: var(--mono-font);
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    animation: dotPulse 2s infinite;
+}
+
+@keyframes dotPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.5); }
+    70%  { box-shadow: 0 0 0 10px rgba(100, 255, 218, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0); }
+}
+
+/* Gradient hero name */
+.home__title {
+    background: linear-gradient(120deg, #ffffff 15%, var(--accent-color) 55%, #4d9fff 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-shadow: none;
+}
+
+/* Blinking typewriter caret */
+.caret {
+    color: var(--accent-color);
+    margin-left: 2px;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Hero stat strip */
+.home__stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 0 0 2rem;
+    animation: fadeInUp 1.3s ease-out;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat__number {
+    display: block;
+    font-family: var(--title-font);
+    font-weight: var(--font-bold);
+    font-size: var(--h2-font-size);
+    color: var(--accent-color);
+}
+
+.stat__label {
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    font-family: var(--mono-font);
+}
+
+/* Rotating dashed ring around portrait */
+.home__img-wrapper {
+    position: relative;
+}
+
+.home__img-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -18px;
+    margin: auto;
+    width: calc(100% + 36px);
+    height: calc(100% + 36px);
+    border: 2px dashed rgba(100, 255, 218, 0.35);
+    border-radius: 50%;
+    animation: spin 28s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Gradient underline for every section title */
+.section__title {
+    position: relative;
+}
+
+.section__title::after {
+    content: '';
+    display: block;
+    width: 64px;
+    height: 3px;
+    margin: .8rem auto 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent-color), #4d9fff);
+}
+
+/* Education timeline refinements */
+.qualification__data {
+    padding-bottom: 1.75rem;
+}
+
+.qualification__title {
+    color: var(--title-color);
+}
+
+.qualification__subtitle {
+    color: var(--text-color);
+}
+
+.qualification__calendar i {
+    margin-right: .35rem;
+    color: var(--accent-color);
+}
+
+/* Skill card headers with icons */
+.skills__title i {
+    margin-right: .5rem;
+}
+
+/* Project highlight stats */
+.project__stats {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.project__stat {
+    flex: 1;
+    min-width: 110px;
+    background: rgba(100, 255, 218, 0.06);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: .6rem;
+    padding: .6rem .5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.project__stat:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.project__stat b {
+    display: block;
+    color: var(--accent-color);
+    font-family: var(--title-font);
+    font-size: var(--h3-font-size);
+}
+
+.project__stat span {
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    font-family: var(--mono-font);
+}
+
+/* Scroll-up button */
+.scroll-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: -20%;
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+    background: linear-gradient(135deg, var(--accent-color), #4d9fff);
+    color: var(--body-color);
+    display: grid;
+    place-items: center;
+    font-size: 1.1rem;
+    z-index: var(--z-fixed);
+    box-shadow: 0 8px 24px rgba(100, 255, 218, 0.35);
+    transition: bottom .4s ease, transform .3s ease;
+}
+
+.scroll-top:hover {
+    transform: translateY(-4px);
+}
+
+.show-scroll {
+    bottom: 1.5rem;
+}
+
+/* Reveal-on-scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .home__img-wrapper::before,
+    .pulse-dot,
+    .caret {
+        animation: none;
+    }
+}
