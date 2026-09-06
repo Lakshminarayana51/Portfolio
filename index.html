@@ -5,16 +5,17 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BW2L229MCN"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        window.dataLayer = window.dataLayer || []
+        function gtag() { dataLayer.push(arguments) }
         gtag('js', new Date());
         gtag('config', 'G-BW2L229MCN');
     </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Lakkoju Lakshminarayana - Web Developer, Full Stack Developer.">
-    <meta name="keywords" content="Lakshminarayana, Web Developer, Portfolio, India">
+    <meta name="description"
+        content="Portfolio of Lakkoju Lakshmi Narayana - Aspiring Full Stack Developer building web applications with React, Node.js and Django.">
+    <meta name="keywords" content="Lakshminarayana, Full Stack Developer, Web Developer, React, Django, Portfolio, India">
     <meta name="author" content="Lakkoju Lakshminarayana">
     <meta name="robots" content="index,follow">
 
@@ -23,7 +24,9 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&family=Roboto+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -34,14 +37,15 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">LLN<span class="dot">.</span></a>
+            <a href="#home" class="nav__logo">LLN<span class="dot">.</span></a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#internship" class="nav__link">Internship</a></li>
                     <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
@@ -64,12 +68,30 @@
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__content">
+                    <span class="home__badge"><span class="pulse-dot"></span> Open to internships &amp; opportunities</span>
                     <span class="home__subtitle">Hi, I'm</span>
                     <h1 class="home__title">Lakkoju Lakshmi Narayana</h1>
-                    <h3 class="home__education">Full Stack Developer</h3>
+                    <h3 class="home__education"><span id="typewriter">Full Stack Developer</span><span class="caret">|</span></h3>
                     <p class="home__description">
-                        Aspiring Full Stack Developer with hands-on experience in building and deploying web applications using React, Node.js, and Django.
+                        Aspiring Full Stack Developer building and deploying web applications with React, Node.js and
+                        Django. Strong foundation in data structures, programming logic and UI/UX, with an active GitHub
+                        portfolio of real-world projects.
                     </p>
+
+                    <div class="home__stats">
+                        <div class="stat">
+                            <span class="stat__number">3+</span>
+                            <span class="stat__label">Projects shipped</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">30%</span>
+                            <span class="stat__label">API latency cut</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat__number">95.3%</span>
+                            <span class="stat__label">Best academic score</span>
+                        </div>
+                    </div>
 
                     <div class="home__buttons">
                         <a href="Lakshmi_Narayana_Resume.pdf" target="_blank" class="button button--ghost">
@@ -82,16 +104,16 @@
                     </div>
 
                     <div class="home__social">
-                        <a href="https://github.com/Lakshminarayana51" target="_blank" class="home__social-icon">
+                        <a href="https://github.com/Lakshminarayana51" target="_blank" class="home__social-icon" aria-label="GitHub">
                             <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com/in/lakkoju-lakshmi-narayana-2a909b310" target="_blank" class="home__social-icon">
+                        <a href="https://linkedin.com/in/lakkoju-lakshmi-narayana-2a909b310" target="_blank" class="home__social-icon" aria-label="LinkedIn">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </a>
-                        <a href="https://x.com/Narayana_51" target="_blank" class="home__social-icon">
+                        <a href="https://x.com/Narayana_51" target="_blank" class="home__social-icon" aria-label="X (Twitter)">
                             <i class="fa-brands fa-x-twitter"></i>
                         </a>
-                        <a href="mailto:lakshminarayanalakkoju2@gmail.com" class="home__social-icon">
+                        <a href="mailto:lakshminarayanalakkoju2@gmail.com" class="home__social-icon" aria-label="Email">
                             <i class="fa-regular fa-envelope"></i>
                         </a>
                     </div>
@@ -111,10 +133,13 @@
             <span class="section__subtitle">My introduction</span>
 
             <div class="about__container container grid">
-                <div class="about__data">
+                <div class="about__data reveal">
                     <p class="about__description">
-                        I am a Bachelor of Engineering student in Electronics and Communication at Sir C R Reddy College of Engineering, Eluru (2023-2027).
-                        I have a strong foundation in data structures, programming logic, and UI/UX. I can work in agile teams and deliver optimized solutions.
+                        I am a Bachelor of Engineering student in Electronics and Communication at
+                        Sir C R Reddy College of Engineering, Eluru (2023&ndash;2027). I have demonstrated ability to
+                        work in Agile teams, deliver impactful solutions and continuously learn modern technologies.
+                        I maintain an active GitHub portfolio with real-world projects, backed by proven leadership,
+                        problem-solving and communication skills.
                     </p>
 
                     <div class="about__info">
@@ -125,16 +150,68 @@
                         </div>
 
                         <div class="about__box">
+                            <i class="fa-solid fa-graduation-cap about__icon"></i>
+                            <h3 class="about__title">Education</h3>
+                            <span class="about__subtitle">B.E. ECE '27</span>
+                        </div>
+
+                        <div class="about__box">
                             <i class="fa-solid fa-briefcase about__icon"></i>
                             <h3 class="about__title">Completed</h3>
                             <span class="about__subtitle">3+ Projects</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div class="about__box">
-                            <i class="fa-solid fa-headset about__icon"></i>
-                            <h3 class="about__title">Support</h3>
-                            <span class="about__subtitle">Online 24/7</span>
+        <!-- EDUCATION -->
+        <section class="qualification section" id="education">
+            <h2 class="section__title">Education</h2>
+            <span class="section__subtitle">My academic journey</span>
+
+            <div class="qualification__container container">
+                <div class="qualification__sections">
+                    <div class="qualification__content" data-content>
+
+                        <div class="qualification__data reveal">
+                            <div>
+                                <h3 class="qualification__title">B.E. &ndash; Electronics &amp; Communication</h3>
+                                <span class="qualification__subtitle">Sir C R Reddy College of Engineering, Eluru</span>
+                                <span class="qualification__desc">Pursuing bachelor's degree; active in hackathons and open-source projects.</span>
+                                <span class="qualification__calendar"><i class="fa-regular fa-calendar"></i> Sep 2023 &ndash; Aug 2027</span>
+                            </div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
                         </div>
+
+                        <div class="qualification__data reveal">
+                            <div>
+                                <h3 class="qualification__title">Intermediate (MPC)</h3>
+                                <span class="qualification__subtitle">Sir C R Reddy Inter College, Eluru</span>
+                                <span class="qualification__score">Percentage: 88.2%</span>
+                                <span class="qualification__calendar"><i class="fa-regular fa-calendar"></i> Jun 2021 &ndash; May 2023</span>
+                            </div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data reveal">
+                            <div>
+                                <h3 class="qualification__title">Secondary School</h3>
+                                <span class="qualification__subtitle">St. Xavier's T.M High School, Eluru</span>
+                                <span class="qualification__score">Percentage: 95.3%</span>
+                                <span class="qualification__calendar"><i class="fa-regular fa-calendar"></i> Jun 2016 &ndash; May 2021</span>
+                            </div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -147,17 +224,26 @@
 
             <div class="skills__container container grid">
                 <!-- Frontend -->
-                <div class="skills__content">
-                    <h3 class="skills__title">Frontend Developer</h3>
+                <div class="skills__content reveal">
+                    <h3 class="skills__title"><i class="fa-solid fa-display"></i> Frontend</h3>
                     <div class="skills__box">
                         <div class="skills__group">
                             <div class="skills__data">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
-                                    <h3 class="skills__name">HTML5/CSS3</h3>
+                                    <h3 class="skills__name">React</h3>
+                                    <span class="skills__level">Intermediate</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h3 class="skills__name">HTML5 / CSS3</h3>
                                     <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="skills__group">
                             <div class="skills__data">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
@@ -168,26 +254,8 @@
                             <div class="skills__data">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
-                                    <h3 class="skills__name">React</h3>
-                                    <span class="skills__level">Intermediate</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills__group">
-                            <div class="skills__data">
-                                <i class="fa-solid fa-circle-check"></i>
-                                <div>
-                                    <h3 class="skills__name">Flexbox/Grid</h3>
-                                    <span class="skills__level">Advanced</span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class="fa-solid fa-circle-check"></i>
-                                <div>
                                     <h3 class="skills__name">Responsive Design</h3>
-                                    <span class="skills__level">Advanced</span>
+                                    <span class="skills__level">Flexbox / Grid</span>
                                 </div>
                             </div>
                         </div>
@@ -195,8 +263,8 @@
                 </div>
 
                 <!-- Backend -->
-                <div class="skills__content">
-                    <h3 class="skills__title">Backend Developer</h3>
+                <div class="skills__content reveal">
+                    <h3 class="skills__title"><i class="fa-solid fa-server"></i> Backend</h3>
                     <div class="skills__box">
                         <div class="skills__group">
                             <div class="skills__data">
@@ -206,7 +274,6 @@
                                     <span class="skills__level">Intermediate</span>
                                 </div>
                             </div>
-
                             <div class="skills__data">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
@@ -215,21 +282,83 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="skills__group">
                             <div class="skills__data">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
-                                    <h3 class="skills__name">REST API</h3>
+                                    <h3 class="skills__name">REST API Integration</h3>
                                     <span class="skills__level">Intermediate</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Languages & Tools -->
+                <div class="skills__content reveal">
+                    <h3 class="skills__title"><i class="fa-solid fa-screwdriver-wrench"></i> Languages &amp; Tools</h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
                             <div class="skills__data">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <div>
-                                    <h3 class="skills__name">Git/GitHub</h3>
-                                    <span class="skills__level">Intermediate</span>
+                                    <h3 class="skills__name">C / Python</h3>
+                                    <span class="skills__level">Programming</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h3 class="skills__name">Git / GitHub</h3>
+                                    <span class="skills__level">Version control</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h3 class="skills__name">VS Code</h3>
+                                    <span class="skills__level">Daily driver</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skills__content reveal">
+                    <h3 class="skills__title"><i class="fa-solid fa-users"></i> Soft Skills</h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h3 class="skills__name">Collaboration &amp; Leadership</h3>
+                                    <span class="skills__level">Agile teams</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h3 class="skills__name">Problem Solving</h3>
+                                    <span class="skills__level">Strong</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h3 class="skills__name">Time Management</h3>
+                                    <span class="skills__level">Strong</span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <div>
+                                    <h3 class="skills__name">Adaptability</h3>
+                                    <span class="skills__level">Strong</span>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +373,7 @@
             <span class="section__subtitle">My professional experience</span>
 
             <div class="internship__container container grid">
-                <div class="internship__card">
+                <div class="internship__card reveal">
                     <div class="internship__header">
                         <i class="fa-solid fa-laptop-code internship__icon"></i>
                         <div>
@@ -253,14 +382,13 @@
                         </div>
                     </div>
 
-                    <span class="internship__date">Jun 2023 – Aug 2023 | Virtual</span>
+                    <span class="internship__date">Jun 2023 &ndash; Aug 2023 | Virtual</span>
 
                     <div class="internship__description">
                         <ul>
-                            <li><i class="fa-solid fa-check"></i> Developed RESTful APIs using Node.js.</li>
-                            <li><i class="fa-solid fa-check"></i> Improved API performance by 30%.</li>
-                            <li><i class="fa-solid fa-check"></i> Built responsive UIs with React and Context API.</li>
-                            <li><i class="fa-solid fa-check"></i> Recognized as Top Intern for code quality.</li>
+                            <li><i class="fa-solid fa-check"></i> Designed 4+ RESTful APIs (Node.js/Express) and optimized endpoints, reducing latency by 30%.</li>
+                            <li><i class="fa-solid fa-check"></i> Built responsive UIs with React Hooks and Context API, cutting re-renders by 35%.</li>
+                            <li><i class="fa-solid fa-check"></i> Recognized as Top Intern for quality code delivery and teamwork.</li>
                         </ul>
                     </div>
                 </div>
@@ -275,17 +403,30 @@
             <div class="projects__container container grid">
 
                 <!-- Project 1 -->
-                <div class="project__card">
+                <div class="project__card reveal">
                     <div class="project__content">
                         <h3 class="project__title">E-Commerce Web Application</h3>
-                        <span class="project__date">Aug 2024 – Nov 2024</span>
+                        <span class="project__date">Aug 2024 &ndash; Nov 2024</span>
+                        <div class="project__stats">
+                            <div class="project__stat">
+                                <b>30%</b>
+                                <span>faster pages</span>
+                            </div>
+                            <div class="project__stat">
+                                <b>90%+</b>
+                                <span>mobile responsive</span>
+                            </div>
+                        </div>
                         <p class="project__description">
-                            Improved page speed by 30% using optimized assets and better state management.
+                            Improved page performance by optimizing image rendering and reducing DOM manipulations;
+                            achieved 90%+ mobile responsiveness across tested devices via media queries and
+                            Flexbox/Grid layout.
                         </p>
                         <div class="project__tags">
                             <span>React</span>
                             <span>Node.js</span>
                             <span>Performance</span>
+                            <span>Flexbox/Grid</span>
                         </div>
                         <a href="https://drive.google.com/file/d/1F6nxmLRc1YdxyVLHq_lwvecU7p93bmvE/view?usp=sharing" target="_blank" class="project__link">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
@@ -294,17 +435,30 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project__card">
+                <div class="project__card reveal">
                     <div class="project__content">
                         <h3 class="project__title">Open Source Job Portal</h3>
-                        <span class="project__date">Nov 2024 – Jan 2025</span>
+                        <span class="project__date">Nov 2024 &ndash; Jan 2025</span>
+                        <div class="project__stats">
+                            <div class="project__stat">
+                                <b>40%</b>
+                                <span>fewer input errors</span>
+                            </div>
+                            <div class="project__stat">
+                                <b>3</b>
+                                <span>core modules</span>
+                            </div>
+                        </div>
                         <p class="project__description">
-                            Developed a job portal with Django including authentication, filtering, and file uploads.
+                            Built an open-source job portal using Django featuring job listings, resume uploads and
+                            user authentication; integrated form validation and custom error handling that reduced
+                            user input errors by 40%.
                         </p>
                         <div class="project__tags">
                             <span>Django</span>
                             <span>Python</span>
                             <span>Auth</span>
+                            <span>Validation</span>
                         </div>
                         <a href="https://drive.google.com/file/d/13C-WSCZwfsji-VFMg9jGg2U9U1B2AMts/view?usp=drive_link" target="_blank" class="project__link">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project
@@ -320,22 +474,22 @@
             <span class="section__subtitle">My honors and awards</span>
 
             <div class="achievements__container container grid">
-                <div class="achievements__card">
+                <div class="achievements__card reveal">
                     <i class="fa-solid fa-chess-king achievements__icon"></i>
                     <h3 class="achievements__title">Chess Champion</h3>
-                    <p class="achievements__description">Winner of Inter-Collegiate Chess Championship.</p>
+                    <p class="achievements__description">Winner of the Inter-Collegiate Chess Championship, demonstrating strategic thinking and focus.</p>
                 </div>
 
-                <div class="achievements__card">
+                <div class="achievements__card reveal">
                     <i class="fa-solid fa-trophy achievements__icon"></i>
                     <h3 class="achievements__title">Top Intern</h3>
-                    <p class="achievements__description">Awarded Top Intern at InternFort for exceptional performance.</p>
+                    <p class="achievements__description">Recognized as Top Intern at InternFort for quality code delivery and teamwork.</p>
                 </div>
 
-                <div class="achievements__card">
+                <div class="achievements__card reveal">
                     <i class="fa-solid fa-code achievements__icon"></i>
                     <h3 class="achievements__title">Hackathon Participant</h3>
-                    <p class="achievements__description">Developed a functional prototype in 24 hours.</p>
+                    <p class="achievements__description">Developed a working web application within a 24-hour college hackathon.</p>
                 </div>
             </div>
         </section>
@@ -346,7 +500,7 @@
             <span class="section__subtitle">Get in touch</span>
 
             <div class="contact__container container grid">
-                <div class="contact__content">
+                <div class="contact__content reveal">
                     <h3 class="contact__title">Talk to me</h3>
 
                     <div class="contact__info">
@@ -371,7 +525,7 @@
                         <div class="contact__card">
                             <i class="fa-solid fa-location-dot contact__card-icon"></i>
                             <h3 class="contact__card-title">Location</h3>
-                            <span class="contact__card-data">Eluru, Andhra Pradesh – 534007</span>
+                            <span class="contact__card-data">Eluru, Andhra Pradesh &ndash; 534007</span>
                         </div>
                     </div>
                 </div>
@@ -386,25 +540,31 @@
 
             <ul class="footer__list">
                 <li><a href="#about" class="footer__link">About</a></li>
+                <li><a href="#education" class="footer__link">Education</a></li>
                 <li><a href="#projects" class="footer__link">Projects</a></li>
                 <li><a href="#contact" class="footer__link">Contact</a></li>
             </ul>
 
             <div class="footer__social">
-                <a href="https://github.com/Lakshminarayana51" target="_blank" class="footer__social-link">
+                <a href="https://github.com/Lakshminarayana51" target="_blank" class="footer__social-link" aria-label="GitHub">
                     <i class="fa-brands fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/lakkoju-lakshmi-narayana-2a909b310" target="_blank" class="footer__social-link">
+                <a href="https://linkedin.com/in/lakkoju-lakshmi-narayana-2a909b310" target="_blank" class="footer__social-link" aria-label="LinkedIn">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
-                <a href="https://x.com/Narayana_51" target="_blank" class="footer__social-link">
+                <a href="https://x.com/Narayana_51" target="_blank" class="footer__social-link" aria-label="X (Twitter)">
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
             </div>
 
-            <span class="footer__copy">&#169; Lakshmi Narayana. All rights reserved.</span>
+            <span class="footer__copy">&#169; 2026 Lakshmi Narayana. All rights reserved.</span>
         </div>
     </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#home" class="scroll-top" id="scroll-up" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
     <script src="script.js"></script>
 
