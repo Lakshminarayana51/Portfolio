@@ -1,10 +1,10 @@
 /*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () => {
-    const scrollUp = document.getElementById('scroll-up');
-    if (scrollUp) {
-        window.scrollY >= 350 
-            ? scrollUp.classList.add('show-scroll')
-            : scrollUp.classList.remove('show-scroll');
+    const scrollUpBtn = document.getElementById('scroll-up');
+    if (scrollUpBtn) {
+        window.scrollY >= 350
+            ? scrollUpBtn.classList.add('show-scroll')
+            : scrollUpBtn.classList.remove('show-scroll');
     }
 };
 window.addEventListener('scroll', scrollUp);
@@ -13,7 +13,7 @@ window.addEventListener('scroll', scrollUp);
 const scrollHeader = () => {
     const header = document.getElementById('header');
     if (header) {
-        window.scrollY >= 50 
+        window.scrollY >= 50
             ? header.classList.add('scroll-header')
             : header.classList.remove('scroll-header');
     }
@@ -36,8 +36,9 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-/*=============== TYPEWRITER (optional) ===============*/
+/*=============== TYPEWRITER EFFECT ===============*/
 const typewriter = document.getElementById('typewriter');
+
 if (typewriter) {
     const texts = ['Software Engineer', 'Full Stack Developer', 'Embedded Enthusiast'];
     let textIndex = 0;
@@ -46,6 +47,7 @@ if (typewriter) {
 
     function type() {
         const current = texts[textIndex];
+
         if (isDeleting) {
             typewriter.textContent = current.substring(0, charIndex - 1);
             charIndex--;
@@ -65,5 +67,6 @@ if (typewriter) {
             setTimeout(type, isDeleting ? 40 : 90);
         }
     }
+
     type();
 }
