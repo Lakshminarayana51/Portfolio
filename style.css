@@ -228,71 +228,102 @@ img {
 }
 
 /* HEADER & NAV */
+/* ===================== HEADER & NAV ===================== */
 .header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
-    background-color: rgba(10, 25, 47, 0.98);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-    animation: slideInDown 0.5s ease-out;
+    z-index: 100;
+    background: rgba(10, 18, 35, 0.72);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.08);
+    transition: background 0.35s ease, box-shadow 0.35s ease;
 }
 
-@keyframes slideInDown {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
+.header.scroll-header {
+    background: rgba(8, 15, 30, 0.88);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+    border-bottom-color: rgba(100, 255, 218, 0.14);
 }
 
 .nav {
-    height: var(--header-height);
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 968px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 1.5rem;
+    gap: 1.5rem;
 }
 
 .nav__logo {
-    color: var(--accent-color);
-    font-weight: var(--font-bold);
-    font-family: var(--title-font);
-    font-size: 1.3rem;
-    z-index: 1002;
-    position: relative;
-    transition: transform 0.3s ease;
+    color: #64ffda;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .nav__logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.06);
+    color: #7fffe6;
 }
 
-.nav__logo .dot {
-    color: var(--title-color);
+.nav__menu {
+    margin-left: auto;
 }
 
-.nav__toggle,
-.nav__close {
-    color: var(--accent-color);
-    font-size: 1.75rem;
-    cursor: pointer;
-    display: none;
-    z-index: 1002;
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    flex-wrap: nowrap;
+}
+
+.nav__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    color: hsl(210, 15%, 72%);
+    font-weight: 500;
+    padding: 0.45rem 0.7rem;
+    border-radius: 0.5rem;
+    white-space: nowrap;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
-.nav__toggle:hover,
-.nav__close:hover {
-    transform: scale(1.2);
+.nav__link:hover {
+    color: #64ffda;
+    background: rgba(100, 255, 218, 0.12);
+    transform: translateY(-1px);
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #64ffda, transparent);
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav__link:hover::after,
+.active-link::after {
+    width: 60%;
+}
+
+.active-link {
+    color: #64ffda;
+    background: rgba(100, 255, 218, 0.12);
 }
 
 /* Mobile Menu */
@@ -1517,7 +1548,36 @@ body {
     margin-right: .35rem;
     color: var(--accent-color);
 }
+/* Glass / Transparent Cards */
+.about__box,
+.skills__content,
+.internship__card,
+.project__card,
+.achievements__card,
+.contact__card {
+    background: rgba(15, 25, 45, 0.55);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border: 1px solid rgba(100, 255, 218, 0.18);
+    border-radius: 1rem;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.35s ease,
+                box-shadow 0.35s ease,
+                background 0.35s ease;
+}
 
+.about__box:hover,
+.skills__content:hover,
+.internship__card:hover,
+.project__card:hover,
+.achievements__card:hover,
+.contact__card:hover {
+    border-color: rgba(100, 255, 218, 0.28);
+    background: rgba(15, 30, 55, 0.7);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35),
+                0 0 0 1px rgba(100, 255, 218, 0.1);
+}
 /* Skill card headers with icons */
 .skills__title i {
     margin-right: .5rem;
